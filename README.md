@@ -37,35 +37,41 @@ h1 ---- s1 ---- h2
 
 ### Step 1: Start Controller
 
+```
 cd ~/pox
+```
+```
 ./pox.py openflow.of_01 ext.traffic_classifier
+```
 
 ---
 
 ### Step 2: Start Mininet
-
+```
 sudo mn --topo single,2 --controller=remote,ip=127.0.0.1 --switch ovsk,protocols=OpenFlow10
-
+```
 ---
 
 ## 🧪 Test Scenarios
 
 ### 1. ICMP Traffic
-
+```
 h1 ping -c 5 h2
-
+```
 ### 2. TCP Traffic
-
+```
 h2 iperf -s &
-
-h1 iperf -c h2
-
+```
+```
+h1 `iperf -c h2
+```
 ### 3. UDP Traffic
-
+```
 h2 iperf -s -u &
-
+```
+```
 h1 iperf -c h2 -u
-
+```
 ---
 
 ## 📊 Sample Output
