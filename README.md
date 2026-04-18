@@ -36,7 +36,7 @@ h1 ---- s1 ---- h2
 ## ⚙️ Setup & Execution
 
 ### Step 1: Start Controller
-
+In 1st Terminal
 ```
 cd ~/pox
 ```
@@ -47,13 +47,14 @@ cd ~/pox
 ---
 
 ### Step 2: Start Mininet
+In 2nd Terminal
 ```
 sudo mn --topo single,2 --controller=remote,ip=127.0.0.1 --switch ovsk,protocols=OpenFlow10
 ```
 ---
 
 ## 🧪 Test Scenarios
-
+2nd Terminal
 ### 1. ICMP Traffic
 ```
 h1 ping -c 5 h2
