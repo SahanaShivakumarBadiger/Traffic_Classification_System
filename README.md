@@ -76,6 +76,7 @@ h1 iperf -c h2 -u
 ---
 
 ## 📊 Sample Output
+In 1st Terminal
 
 TCP Packet
 
