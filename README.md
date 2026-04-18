@@ -38,6 +38,7 @@ h1 ---- s1 ---- h2
 ### Step 1: Start Controller
 
 cd ~/pox
+
 ./pox.py openflow.of_01 ext.traffic_classifier
 
 ---
@@ -57,11 +58,13 @@ h1 ping -c 5 h2
 ### 2. TCP Traffic
 
 h2 iperf -s &
+
 h1 iperf -c h2
 
 ### 3. UDP Traffic
 
 h2 iperf -s -u &
+
 h1 iperf -c h2 -u
 
 ---
@@ -69,7 +72,9 @@ h1 iperf -c h2 -u
 ## 📊 Sample Output
 
 TCP Packet
+
 UDP Packet
+
 ICMP Packet
 
 Stats → TCP: 45158, UDP: 898, ICMP: 10
@@ -84,9 +89,6 @@ Stats → TCP: 45158, UDP: 898, ICMP: 10
 
 ---
 
-## ⚠️ Note
-
-Some packet parsing errors may occur due to Python 3.12 compatibility with POX. These are handled safely and do not affect system functionality.
 
 ---
 
