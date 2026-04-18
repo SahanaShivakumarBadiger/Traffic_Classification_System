@@ -38,7 +38,6 @@ h1 ---- s1 ---- h2
 ### Step 1: Start Controller
 
 cd ~/pox
-
 ./pox.py openflow.of_01 ext.traffic_classifier
 
 ---
