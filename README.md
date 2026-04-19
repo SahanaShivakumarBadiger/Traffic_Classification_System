@@ -64,7 +64,7 @@ h1 ping -c 5 h2
 h2 iperf -s &
 ```
 ```
-h1 `iperf -c h2
+h1 iperf -c h2
 ```
 ### 3. UDP Traffic
 ```
